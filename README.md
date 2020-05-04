@@ -1,7 +1,9 @@
 # obfuscate
 In this project, we propose a novel pipeline that combines a face verification model with face augmentation methods for the task of one-shot face verification. The target application is face verification on event images to ensure privacy of visitors. The pipeline is tested for augmentations in pose, illumination and expression using the Multi-PIE and RaFD datasets. We show that our method can increase recall significantly, but that this is dependent on the quality of augmentations. We furthermore provide insight as to where and why the pipeline might fail. Using n-shot learning to recognize faces under various augmentations.
 
+Made by Micha de Groot, Pieter Kronemeijer, Anton Steenvoorden, Douwe van der Wal and Laurens Weitkamp (all equal contribution)
 
+[Full report](Project_AI_obfuscate.pdf)
 
 ## MultiPIE filename structure
 
