@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Results!{% endblock %}
+
+
+{% block content %}
+{{super()}}
+<style>
+    .results {
+        width:70%;
+        margin:0 auto;
+    }
+    .results img {
+        width:50%;
+    }
+    h2 {
+        text-align: center;
+    }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
+    @media only screen {
+        .results {
+            width: 100%;
+        }
+        .results img {
+            width:100%;
+        }
+    }
+</style>
+
+<a class="btn btn-primary" href="/">Go back to the homepage</a>
+<img src="http://www.pindakaas.ga/obfuscate.png" alt="obfuscate logo" class="center" style="max-width:500px">
+<div class="results">
+    <h2 class="labels">Original</h2>
+    <img src="data:image/png;base64,{{original}}">
+    <h2 class="labels">Processed</h2>
+    <img src="data:image/png;base64,{{processed}}">
+</div>
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %}Upload a file to test it{% endblock %}
+
+
+{% block content %}
+{{super()}}
+<style>
+    form {
+        text-align: center;
+    }
+
+    input {
+        text-align: center;
+        margin: auto;
+    }
+
+    h2 {
+        text-align: center;
+        margin: auto;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
+    #uploadform {
+         transition: visibility 1s, opacity 1s ease-out;
+     }
+    img#loading {
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        visibility: hidden;
+        opacity: 0;
+
+        cursor: wait;
+        z-index: 999;
+        transition: visibility 1.5s, opacity 1.5s ease-in;
+    }
+    body {
+        transition: background-color 1s ease-in-out;
+    }
+</style>
+<script type="text/javascript">
+    function loading() {
+        console.log("Loading animation");
+        var element = document.getElementById("loading");
+        element.style.visibility = "visible";
+        element.style.opacity = 1;
+        var element2 = document.getElementById("uploadform");
+        element2.style.visibility = "hidden";
+        element2.style.opacity = 0;
+
+        document.body.style.backgroundColor = "black";
+    }
+</script>
+<div id="uploadform">
+<img src="http://www.pindakaas.ga/obfuscate.png" alt="obfuscate logo" class="center">
+<h2>Upload new File</h2>
+<form method=post enctype=multipart/form-data>
+    <div class="form-group">
+        <label for="file">Choose file:</label>
+        <input type=file name=file class="btn btn-light"><br>
+        <label id="inp" for="file">Click to start processing:</label><br>
+        <input type="submit" name="button" value="upload blur" class='btn btn-primary' onclick="loading();">
+        <input type="submit" name="button" value="upload target" class='btn btn-secondary' onclick="loading();">
+    </div>
+</form>
+</div>
+<img id="loading" src="http://www.pindakaas.ga/coffee.gif"/>
+
+
+<!-- 
+<h2>TESTING</h2>
+<form action="/action_page.php">
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" class="form-control" id="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>  -->
+
+{% endblock %}
+
+
+
+

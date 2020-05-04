@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Results!{% endblock %}
+
+
+{% block content %}
+{{super()}}
+<style>
+  .results {
+    width:100%;
+    margin:0 auto;
+  }
+  .results img {
+    width:100%;
+    max-width:1000px;
+  }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+</style>
+
+<a class="btn btn-primary" href="/">Go back to the homepage</a>
+<img src="http://www.pindakaas.ga/obfuscate.png" alt="obfuscate logo" class="center">
+<div class="results">
+{#<img src="data:image/png;base64,{{original}}">#}
+  {% for index in images %}
+    <img src="data:image/png;base64,{{index}}">
+  {% endfor %}
+</div>
+{% endblock %}
