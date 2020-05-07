@@ -59,11 +59,11 @@ The filenames code all image features in the following way, here as example
 _"Rafd090_28_Caucasian_male_angry_frontal.jpg"_:
 
 
-VL2 = "000"  # -90 (right side visible)
-VL1 = "045"  # -45 (right side visible)
-VN  = "090"  # 0   (frontal view)
-VR1 = "135"  # 45  (left side visible)
-VR2 = "180"  # 90  (left side visible) 
+VL2 = "000"  # -90 (right side visible)  
+VL1 = "045"  # -45 (right side visible)  
+VN  = "090"  # 0   (frontal view)  
+VR1 = "135"  # 45  (left side visible)  
+VR2 = "180"  # 90  (left side visible)  
 
 
 
